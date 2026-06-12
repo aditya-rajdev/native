@@ -6,8 +6,8 @@
     <application
       android:name=".MainApplication"
       android:label="@string/app_name"
-      android:icon="@mipmap/ic_launcher"
-      android:roundIcon="@mipmap/ic_launcher_round"
+      android:icon="@mipmap/app_icon"       
+      android:roundIcon="@mipmap/app_icon"  
       android:allowBackup="false"
       android:theme="@style/AppTheme"
       android:usesCleartextTraffic="${usesCleartextTraffic}"
@@ -29,13 +29,25 @@
           </intent-filter>
           <meta-data
               android:name="android.appwidget.provider"
-              android:resource="@xml/one_cell_widget_info" /> </receiver>
+              android:resource="@xml/one_cell_widget_info" /> 
+      </receiver>
+
+      <receiver 
+          android:name=".ThreeCellWidgetProvider" 
+          android:exported="false">
+          <intent-filter>
+              <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+          </intent-filter>
+          <meta-data
+              android:name="android.appwidget.provider"
+              android:resource="@xml/three_by_one_widget_info" />
+      </receiver>
 
       <receiver
           android:name=".LinkClickReceiver"
           android:exported="true">
           <intent-filter>
-              <action android:name="com.widget.ACTION_OPEN_URL"/>
+              <action android:name="com.zurl.app.ACTION_OPEN_URL"/>
           </intent-filter>
       </receiver>
 

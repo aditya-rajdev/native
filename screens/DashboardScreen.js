@@ -35,7 +35,7 @@ export default function DashboardScreen({navigation}) {
       return '#de0000'; // Red
     }
     if (lowerUrl.includes('github')) {
-      return '#000000'; // Black
+      return '#dbdbdb'; // Black
     }
     if (lowerUrl.includes('linkedin')) {
       return '#006de1'; // Blue

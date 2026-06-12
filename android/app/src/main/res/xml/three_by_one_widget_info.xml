@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
-    android:minWidth="40dp"
+    android:minWidth="180dp"
     android:minHeight="40dp"
     android:updatePeriodMillis="0"
-    android:initialLayout="@layout/one_cell_widget_layout"
+    android:initialLayout="@layout/three_by_one_widget_layout"
     android:configure="com.zurl.app.WidgetConfigActivity"
-    android:resizeMode="horizontal|vertical"
-    android:widgetCategory="home_screen" />
+    android:resizeMode="horizontal"
+    android:widgetCategory="home_screen">
+</appwidget-provider>
